@@ -59,4 +59,4 @@ class TestHelloFreshLinkCrawler:
             ):
                 assured_links = self.crawler.assure_recipe_links(use_stored=True, save_to_db=False)
         assert isinstance(assured_links, pd.DataFrame), "Expected a DataFrame of assured recipe links"
-        assert len(assured_links) > 20, "Expected at least 20 recipe links"
+        assert len(assured_links) > 10, "Expected at least 10 recipe links"

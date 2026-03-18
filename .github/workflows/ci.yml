@@ -86,10 +86,4 @@ jobs:
             --project=${{ vars.GCLOUD_PROJECT_ID }} \
             --memory=${{ vars.RUN_MEMORY }} \
             --allow-unauthenticated \
-            --set-env-vars="DATABASE_URL=${{ secrets.DATABASE_URL }}" \
-            --set-env-vars="FIREBASE_REALTIME_DB_URL=${{ secrets.FIREBASE_REALTIME_DB_URL }}" \
-            --set-env-vars="OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" \
-            --set-env-vars="STORAGE_ENDPOINT=${{ secrets.STORAGE_ENDPOINT }}" \
-            --set-env-vars="STORAGE_KEY_ID=${{ secrets.STORAGE_KEY_ID }}" \
-            --set-env-vars="STORAGE_APPLICATION_KEY=${{ secrets.STORAGE_APPLICATION_KEY }}"
-            --set-env-vars="TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}" \
+            --set-env-vars="TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }},DATABASE_URL=${{ secrets.DATABASE_URL }},FIREBASE_REALTIME_DB_URL=${{ secrets.FIREBASE_REALTIME_DB_URL }},OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }},STORAGE_ENDPOINT=${{ secrets.STORAGE_ENDPOINT }},STORAGE_KEY_ID=${{ secrets.STORAGE_KEY_ID }},STORAGE_APPLICATION_KEY=${{ secrets.STORAGE_APPLICATION_KEY }}"

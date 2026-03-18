@@ -16,8 +16,10 @@ bot = TelegramBot()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    thread = threading.Thread(target=bot.start_bot_persistent, daemon=True)
+    print("Starting bot thread...")
+    thread = threading.Thread(target=bot.start_bot_persistent)
     thread.start()
+    print("Bot thread started, FastAPI ready")
     yield
 
 

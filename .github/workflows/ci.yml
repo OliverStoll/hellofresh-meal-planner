@@ -13,23 +13,18 @@ jobs:
       FIREBASE_REALTIME_DB_URL: ${{ secrets.FIREBASE_REALTIME_DB_URL }}
     steps:
       - uses: actions/checkout@v5
-
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.13"
           cache: "pip"
-
       - name: Install dependencies
         run: pip install -r requirements.txt
-
       - name: Run tests with coverage
         run: pytest --cov=src --cov-report=xml --cov-report=term-missing
-
       - name: Upload coverage to codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v5
         with:
-          files: ./coverage.xml
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: OliverStoll/hellofresh-meal-planner
 
@@ -62,17 +57,14 @@ jobs:
         uses: google-github-actions/auth@v3
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
-
       - name: Configure Docker for Artifact Registry
         run: gcloud auth configure-docker ${{ vars.GCLOUD_REGION }}-docker.pkg.dev
-
       - name: Build Docker image
         run: |
           docker build \
             -t ${{ vars.GCLOUD_REGION }}-docker.pkg.dev/${{ vars.GCLOUD_PROJECT_ID }}/${{ vars.GCLOUD_ARTIFACT_REPO }}/${{ vars.SERVICE_NAME }}:latest \
             -f ./Dockerfile \
             .
-
       - name: Push Docker image
         run: |
           docker push \
@@ -86,7 +78,6 @@ jobs:
         uses: google-github-actions/auth@v3
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
-
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy ${{ vars.SERVICE_NAME }} \

@@ -66,10 +66,6 @@ TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 DATABASE_URL=postgresql://user:password@host/dbname
 FIREBASE_REALTIME_DB_URL=https://your-project-default-rtdb.firebaseio.com
 OPENAI_API_KEY=your_openai_api_key
-
-# Optional – defaults shown below
-PROJECT_NAME=meal_bot
-RECIPE_URL=https://www.hellofresh.de/recipes/
 ```
 
 ---

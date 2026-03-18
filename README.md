@@ -24,23 +24,22 @@ A Telegram bot that helps you plan your weekly meals, generate shopping lists, a
 
 ## Tech Stack
 
-| Layer | Technology                 |
-|---|----------------------------|
-| Language | Python 3.11                |
-| Bot framework | pyTelegramBotAPI           |
-| Database | PostgreSQL via SQLAlchemy  |
-| User data | Firebase Realtime Database |
-| ML / recommendations | OpenAI API  |
-| PDF generation | PyMuPDF (fitz)             |
-| Web scraping | Selenium                   |
-| Scheduling | schedule                   |
-| Containerisation | Docker                     |
+| Layer                 | Technology                  |
+|-----------------------|-----------------------------|
+| Language              | Python 3.10+                |
+| Bot framework         | pyTelegramBotAPI            |
+| Database              | PostgreSQL via SQLAlchemy   |
+| User data             | Firebase Realtime Database  |
+| ML / recommendations  | OpenAI API                  |
+| PDF generation        | PyMuPDF (fitz)              |
+| Web scraping          | Selenium                    |
+| Containerisation      | Docker                      |
 
 ---
 
 ## Prerequisites
 
-- Python 3.11
+- Python 3.10+
 - A [Telegram bot token](https://core.telegram.org/bots#botfather)
 - A PostgreSQL database (e.g. [Neon](https://neon.tech/) free tier)
 - A [Firebase](https://firebase.google.com/) project with Realtime Database enabled

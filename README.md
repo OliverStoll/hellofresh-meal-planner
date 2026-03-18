@@ -17,7 +17,7 @@ A Telegram bot that helps you plan your weekly meals, generate shopping lists, a
 - **Favourites** – save recipes and generate meal plans from your favourites only
 - **User settings** – customise portion size, diet type (all / vegetarian / vegan / high-protein), maximum cooking time, and minimum calories
 - **PDF recipes** – each recipe is sent as a formatted PDF including images, ingredients, instructions, and nutritional info
-- **AI recommendations** – OpenAI embeddings + cosine similarity match recipes to your taste profile
+- **AI recommendations** – OpenAI embeddings + similarity matching recipes to your taste profile
 - **Data pipeline** – Selenium-based crawler ingests recipes from HelloFresh into a PostgreSQL database
 
 ---

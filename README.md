@@ -76,7 +76,7 @@ OPENAI_API_KEY=your_openai_api_key
 python src/telegram.py
 ```
 
-The bot will start polling for messages and schedule the weekly meal-plan delivery.
+The bot will start polling for messages and schedule the weekly meal-plan delivery. 
 
 ---
 

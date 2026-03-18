@@ -8,4 +8,4 @@ COPY . .
 EXPOSE 8080
 ENV IS_DOCKER=true
 ENV PYTHONPATH "${PYTHONPATH}:/app/src"
-CMD ["python", "src/telegram.py"]
+CMD ["python", "src/docker_entry.py"]
